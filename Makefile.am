@@ -54,6 +54,7 @@ tsdb_SRC := \
 	src/core/TSQuery.java	\
 	src/core/TSSubQuery.java	\
 	src/core/WritableDataPoints.java	\
+	src/deferred/HBaseDeferredClient.java	\
 	src/graph/Plot.java	\
 	src/meta/Annotation.java	\
 	src/meta/TSMeta.java	\
