@@ -116,6 +116,8 @@ tsdb_SRC := \
 tsdb_DEPS = \
 	$(ASYNCHBASE)	\
 	$(GUAVA)	\
+	$(HADOOP)	\
+	$(HBASECLIENT)	\
 	$(LOG4J_OVER_SLF4J)	\
 	$(LOGBACK_CLASSIC)	\
 	$(LOGBACK_CORE)	\
@@ -580,6 +582,9 @@ pom.xml: pom.xml.in Makefile
 	    -e 's/@ASYNCHBASE_VERSION@/$(ASYNCHBASE_VERSION)/' \
 	    -e 's/@GUAVA_VERSION@/$(GUAVA_VERSION)/' \
 	    -e 's/@GWT_VERSION@/$(GWT_VERSION)/' \
+	    -e 's/@HADOOP_VERSION@/$(HADOOP_VERSION)/' \
+	    -e 's/@HAMCREST_VERSION@/$(HAMCREST_VERSION)/' \
+	    -e 's/@HBASECLIENT_VERSION@/$(HBASECLIENT_VERSION)/' \
 	    -e 's/@HAMCREST_VERSION@/$(HAMCREST_VERSION)/' \
 	    -e 's/@JACKSON_VERSION@/$(JACKSON_VERSION)/' \
 	    -e 's/@JAVASSIST_VERSION@/$(JAVASSIST_VERSION)/' \
