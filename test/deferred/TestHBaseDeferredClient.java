@@ -13,12 +13,12 @@
 package net.opentsdb.deferred;
 
 import junit.framework.TestCase;
-import net.opentsdb.deferred.Runner;
+import net.opentsdb.deferred.HBaseDeferredClient;
+import org.apache.hadoop.conf.Configuration;
 
 public final class TestHBaseDeferredClient extends TestCase {
 
   public void testMessage() {
-    assertEquals(10, Runner.run(10));
   }
 
 }
