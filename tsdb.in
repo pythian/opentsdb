@@ -100,4 +100,8 @@ shift
 JAVA=${JAVA-'java'}
 JVMARGS=${JVMARGS-'-enableassertions -enablesystemassertions'}
 test -r "$localdir/tsdb.local" && . "$localdir/tsdb.local"
-exec $JAVA $JVMARGS -classpath "$CLASSPATH" net.opentsdb.tools.$MAINCLASS "$@"
+
+HBASE_CONF="/usr/local/hbase/conf"
+HBASE_LIB="/usr/local/hbase/lib/bigtable"
+
+exec $JAVA $JVMARGS -classpath "$CLASSPATH:$HBASE_CONF" -Xbootclasspath/p:$HBASE_LIB/alpn-boot-7.1.3.v20150130.jar net.opentsdb.tools.$MAINCLASS "$@"
